@@ -1,10 +1,18 @@
 # kafka-template
 
-A Clojure library designed to ... well, that part is up to you.
+ simple app template to create kafka clients using core.async
 
 ## Usage
 
-FIXME
+Just instantiate `producer!`s and `consumer!`s when you need.
+Both those functions return a `core.async/chan`.
+
+To send send a message to topic, send a message to the producer channel returned by `producer!`.
+
+To receive a message from a topic, read the messages on the consumer channel returned by `consumer!`.
+
+There is also a `worker!` facility that applies consumes a consumer channel and apply a function to each message received.
+
 
 ## License
 
