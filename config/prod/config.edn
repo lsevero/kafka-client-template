@@ -1,5 +1,5 @@
 {:consumer {:topic "poc"
-            :properties {"bootstrap.servers" "localhost:9092" 
+            :properties {"bootstrap.servers" #or [#env KAFKA_BROKER "localhost:9092"]
                          "group.id" "test"
                          "auto.offset.reset" "latest"
                          "enable.auto.commit" "true"
@@ -7,7 +7,7 @@
                          "value.deserializer" "org.apache.kafka.common.serialization.StringDeserializer"
                          }}
  :producer {:topic "poc"
-            :properties {"bootstrap.servers" "localhost:9092"
+            :properties {"bootstrap.servers" #or [#env KAFKA_BROKER "localhost:9092"]
                          "key.serializer" "org.apache.kafka.common.serialization.StringSerializer"
                          "value.serializer" "org.apache.kafka.common.serialization.StringSerializer"
                          }}}

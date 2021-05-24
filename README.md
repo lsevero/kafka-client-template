@@ -13,6 +13,10 @@ To receive a message from a topic, read the messages on the consumer channel ret
 
 There is also a `worker!` facility that applies consumes a consumer channel and apply a function to each message received.
 
+To run the example just:
+```bash
+lein run
+```
 
 ## License
 
