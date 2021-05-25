@@ -8,7 +8,7 @@
                  [mount "0.1.16"]
                  [aero "1.1.6"]
                  [com.damballa/abracad "0.4.13"]
-                 [org.apache.kafka/kafka-clients "2.1.0"]
+                 [org.apache.kafka/kafka-clients "2.6.1"]
                  [org.clojure/core.async "1.3.618"]
                  [org.clojure/tools.logging "1.1.0"]
                  ]
