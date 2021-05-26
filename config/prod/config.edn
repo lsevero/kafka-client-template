@@ -5,9 +5,17 @@
                          "enable.auto.commit" "true"
                          "key.deserializer" "org.apache.kafka.common.serialization.StringDeserializer"
                          "value.deserializer" "org.apache.kafka.common.serialization.StringDeserializer"
+                         ;SSL options
+                         ;"security.protocol" "SASL_SSL"
+                         ;"sasl.mechanism" "SCRAM-SHA-512"
+                         ;"sasl.jaas.config" #join ["org.apache.kafka.common.security.scram.ScramLoginModule required username=" #env KAFKA_USERNAME " password=" #env KAFKA_PASSWORD ";"]
                          }}
  :producer {:topic "poc"
             :properties {"bootstrap.servers" #or [#env KAFKA_BROKER "localhost:9092"]
                          "key.serializer" "org.apache.kafka.common.serialization.StringSerializer"
                          "value.serializer" "org.apache.kafka.common.serialization.StringSerializer"
+                         ;SSL options
+                         ;"security.protocol" "SASL_SSL"
+                         ;"sasl.mechanism" "SCRAM-SHA-512"
+                         ;"sasl.jaas.config" #join ["org.apache.kafka.common.security.scram.ScramLoginModule required username=" #env KAFKA_USERNAME " password=" #env KAFKA_PASSWORD ";"]
                          }}}
