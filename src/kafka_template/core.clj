@@ -1,9 +1,7 @@
 (ns kafka-template.core
   (:gen-class)
-  (:require [kafka-template 
-             [worker :refer [worker!]]
-             [consumer :refer [consumer!]]
-             [producer :refer [producer!]]
+  (:require [trivial-kafka-async.core :refer [consumer! producer! worker!]]
+            [kafka-template 
              [config :refer [config]]
              ]
             [clojure.core.async
