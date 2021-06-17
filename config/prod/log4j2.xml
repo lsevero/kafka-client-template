@@ -2,8 +2,9 @@
 <Configuration status="WARN">
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
-            <PatternLayout 
-                pattern="%d [%t] %-5level %logger{36} - %msg%n%throwable"/>
+            <PatternLayout>
+                <pattern>{"timestamp":"%d{dd-MM-yyyy HH:mm:ss.SSSZ}", "thread":"%t", "level":"%-5level", "message":"%replace{%replace{%msg}{[\r?\n]+}{}}{"}{'}"}%n</pattern>       
+            </PatternLayout>    
         </Console>
     </Appenders>
     <Loggers>
