@@ -8,7 +8,7 @@
                  [mount "0.1.16"]
                  [aero "1.1.6"]
                  [com.damballa/abracad "0.4.13"]
-                 [org.clojars.lsevero/trivial-kafka-async "0.1.0"]
+                 [org.clojars.lsevero/trivial-kafka-async "0.1.1"]
                  [org.clojure/tools.logging "1.1.0"]
                  ]
 
